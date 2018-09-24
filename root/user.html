@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <table cellspacing="4" border="0">
+        <tr>
+            <td> <h3> CMPE 202 Project: By Team Corona </h3></td>
+            <td class="row-right">
+                <a href="login.html"> <span>Log out</span> </a>
+            </td>
+        </tr>
+    </table>
+    <br>
+</header>
+
+<!--Applications-->
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <table border="1" cellspacing="0" cellpadding="3">
+                    <tr>
+                        <td colspan="6" class="title">Applications</td>
+                    </tr>
+                    <tr>
+                        <td class="header-left"><small>Path</small></td>
+                        <td class="header-left"><small>Version</small></td>
+                        <td class="header-center"><small>Display Name</small></td>
+                        <td class="header-center"><small>Running</small></td>
+                        <td class="header-left"><small>Sessions</small></td>
+                        <td class="header-left"><small>Commands</small></td>
+                    </tr>
+                    <tr>
+                        <td class="row-left"  rowspan="2"><small><a href="/">/</a></small></td>
+                        <td class="row-left"  rowspan="2"><small><i>None specified</i></small></td>
+                        <td class="row-left"  rowspan="2"><small>Display Name 1</small></td>
+                        <td class="row-center" rowspan="2"><small>true</small></td>
+                        <td class="row-center" rowspan="2"><small><a href=""></a></small></td>
+                        <td class="row-left">
+                            &nbsp;<small>Start</small>&nbsp;
+                            <form class="inline">  <small><input type="submit" value="Stop"></small>  </form>
+                            <form class="inline">  <small><input type="submit" value="Undeploy"></small>  </form>
+                        </td>
+                    </tr><tr>
+
+                </tr>
+                    <tr>
+                        <td class="row-left" rowspan="2"><small><a href="/docs/">/docs</a></small></td>
+                        <td class="row-left" rowspan="2"><small><i>None specified</i></small></td>
+                        <td class="row-left" rowspan="2"><small>Display Name 2 Documentation</small></td>
+                        <td class="row-center" rowspan="2"><small>true</small></td>
+                        <td class="row-center" rowspan="2"><small><a href=""></a></small></td>
+                        <td class="row-left">
+                            &nbsp;<small>Start</small>&nbsp;
+                            <form class="inline">  <small><input type="submit" value="Stop"></small>  </form>
+                            <form class="inline">  <small><input type="submit" value="Undeploy"></small>  </form>
+                        </td>
+                    </tr>
+                    <tr>
+
+                    </tr>
+                    <tr>
+                        <td class="row-left" rowspan="2"><small><a href="/manager/">/manager</a></small></td>
+                        <td class="row-left" rowspan="2"><small><i>None specified</i></small></td>
+                        <td class="row-left" rowspan="2"><small>Display Name 3 Manager</small></td>
+                        <td class="row-center" rowspan="2"><small>true</small></td>
+                        <td class="row-center" rowspan="2"><small><a href=""></a></small></td>
+                        <td class="row-left">
+                            <small>
+                                &nbsp;Start&nbsp;
+                                &nbsp;Stop&nbsp;
+                                &nbsp;Undeploy&nbsp;
+                            </small>
+                        </td>
+                    </tr>
+
+                </table>
+                <br>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Deploy-->
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <table border="1" cellspacing="0" cellpadding="3">
+                    <tr>
+                        <td colspan="2" class="title">Deploy</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="header-left"><small>Deploy directory or WAR file located on server</small></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <form>
+                                <table cellspacing="0" cellpadding="3">
+                                    <tr>
+                                        <td class="row-right">
+                                            <small>Context Path (required):</small>
+                                        </td>
+                                        <td class="row-left">
+                                            <input type="text" name="deployPath" size="20">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="row-right">
+                                            <small>XML Configuration file URL:</small>
+                                        </td>
+                                        <td class="row-left">
+                                            <input type="text" name="deployConfig" size="20">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="row-right">
+                                            <small>WAR or Directory URL:</small>
+                                        </td>
+                                        <td class="row-left">
+                                            <input type="text" name="deployWar" size="40">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="row-right">
+                                            &nbsp;
+                                        </td>
+                                        <td class="row-left">
+                                            <input type="submit" value="Deploy">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="header-left"><small>WAR file to deploy</small></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <form >
+                                <table cellspacing="0" cellpadding="3">
+                                    <tr>
+                                        <td class="row-right">
+                                            <small>Select WAR file to upload</small>
+                                        </td>
+                                        <td class="row-left">
+                                            <input type="file" name="deployWar" size="40">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="row-right">
+                                            &nbsp;
+                                        </td>
+                                        <td class="row-left">
+                                            <input type="submit" value="Deploy">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </form>
+                        </td>
+                    </tr>
+                </table>
+                <br>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Server Information-->
+<section>
+    <div class="container">
+        <div class="row">
+            <table border="1" cellspacing="0" cellpadding="3">
+                <tr>
+                    <td colspan="8" class="title">Server Information</td>
+                </tr>
+                <tr>
+                    <td class="header-center"><small>Tomcat Version</small></td>
+                    <td class="header-center"><small>JVM Version</small></td>
+                    <td class="header-center"><small>JVM Vendor</small></td>
+                    <td class="header-center"><small>OS Name</small></td>
+                    <td class="header-center"><small>OS Version</small></td>
+                    <td class="header-center"><small>OS Architecture</small></td>
+                    <td class="header-center"><small>Hostname</small></td>
+                    <td class="header-center"><small>IP Address</small></td>
+                </tr>
+                <tr>
+                    <td class="row-center"><small>Apache Tomcat/9.0.0.M22</small></td>
+                    <td class="row-center"><small>1.8.0_141-b15</small></td>
+                    <td class="row-center"><small>Oracle Corporation</small></td>
+                    <td class="row-center"><small>Windows 8.1</small></td>
+                    <td class="row-center"><small>6.3</small></td>
+                    <td class="row-center"><small>amd64</small></td>
+                    <td class="row-center"><small>shaily_khare</small></td>
+                    <td class="row-center"><small>10.15.255.14</small></td>
+                </tr>
+            </table>
+            <br>
+
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <div class="row">
+
+        </div>
+    </div>
+</section>
+</body>
+</html>

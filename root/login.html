@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow">
+
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<div class="container" style="margin-top: 5%;">
+    <div class="col-md-4 col-md-offset-4">
+        <div class="panel panel-primary">
+            <div class="panel-heading">Login</div>
+            <div class="panel-body">
+
+                <form id="form_id" method="post" name="myForm">
+
+                    <div class="row">
+                        <div class="form-group col-xs-12">
+                            <label for="username"><span class="text-danger" style="margin-right:5px;">*</span>Username:</label>
+                            <div class="input-group">
+                                <input class="form-control" id="username" type="text" name="username" placeholder="Username" required/>
+                                <span class="input-group-btn">
+                                    <label class="btn btn-primary"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></label>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group col-xs-12">
+                            <label for="password"><span class="text-danger" style="margin-right:5px;">*</span>Password:</label>
+                            <div class="input-group">
+                                <input class="form-control" id="password" type="password" name="password" placeholder="Password" required/>
+                                <span class="input-group-btn">
+                                    <label class="btn btn-primary"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span></label>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group col-xs-12">
+                            <label><span class="text-danger" style="margin-right:5px;">*</span>Role:&nbsp;</label>
+                                <input class="form-check-input" type="radio" name="role" id="role_user" value="role_user"> User &nbsp;
+                                <input class="form-check-input" type="radio" name="role" id="role_manager" value="role_manager"> Manager
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group col-xs-4">
+                            <input type="button" value="Login" id="submit" onclick="validate()"/>
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script type="text/javascript">
+
+        function validate(){
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if ( username == "user" && password == "user" &&document.getElementById("role_user").checked){
+                alert ("Login successful as User");
+                window.location.href = "http://www.google.com";
+                return false;
+            }
+            else if( username == "test" && password == "test" && document.getElementById("role_manager").checked){
+                alert ("Login successful as Manager");
+                window.location.href = "manager.html";
+                return false;
+            }
+            else{
+                alert ("Username or Password or Role is incorrect");
+            }
+        }
+    </script>
+</body>
+</html>
